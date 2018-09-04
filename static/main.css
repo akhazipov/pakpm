@@ -1,0 +1,40 @@
+html { 
+    background: #fa0; 
+    height: 100%;
+    width: 100%; 
+}
+
+body { 
+    background: #ccc; 
+    color: #000; 
+    margin: 0;
+    padding: 0; 
+}
+
+#ymapid { 
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
+#filters {
+    position: fixed; 
+    right: 120px;
+    bottom: 20px;
+    background: #fa0; 
+}
+
+#myFile {
+    width: 140px;
+}
+
+.ballon_header { font-size: 16px; margin-top: 0; margin-bottom: 10px;}
+.ballon_body { font-size: 14px; }
+
+.red {color: red;}
+.blue {color: blue;}
+.orange {color: orange;}
+.darkGreen {color: darkGreen;}
+
+.cluster-balloon-item-bold {font-weight: bold;}
