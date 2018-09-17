@@ -1,6 +1,6 @@
 function addClusterGridSizeChanger(myMap, gridSize, myClusterer) {
-    var gridLayout = ymaps.templateLayoutFactory.createClass("<div>" +
-            "<div id='grid-in' class='btn'><i class='icon-plus'></i></div><br>" +
+    var gridLayout = ymaps.templateLayoutFactory.createClass("<div style='margin-left: 40px'>" +
+            "<div id='grid-in' class='btn'><i class='icon-plus'></i></div>" +
             "<div id='grid-out' class='btn'><i class='icon-minus'></i></div>" +
         "</div>", 
     {

@@ -11,10 +11,10 @@ function main(){
 
     ymaps.ready(function  () {
         var myMap = new ymaps.Map('ymapid', {
-                        center: [55.798227, 37.713063],
-                        zoom: 16,
-                        behaviors: ["scrollZoom","drag"],
-                        controls: []
+                        center: [55.75, 37.65],
+                        zoom: 12,
+//                        behaviors: ["scrollZoom","drag"],
+                        controls: ["searchControl", "zoomControl"],
                     });
 
     var offenceArray = [];
@@ -41,7 +41,7 @@ function main(){
         });
         var ClusterGridSizeChanger = addClusterGridSizeChanger(myMap, gridSize, myClusterer);
         // console.log(ClusterGridSizeChanger);
-        myMap.controls.add(ClusterGridSizeChanger, {float: 'right'});
+        myMap.controls.add(ClusterGridSizeChanger, {float: 'left', floatIndex: 6});
         // var myClusterer = new PieChartClusterer();
         // var url = 'http://xn--b1algahcegbed6a6gqb.xn--p1ai/data/map.json';
         // var url = 'data/multi_3.json';
@@ -83,6 +83,7 @@ function main(){
                             image = 'img/marker-orange.png';
                             presetID = 2;
                             ttype = ' (Тротуар)';
+                            break;
                         case 6:
                             image = 'img/marker-orange.png';
                             presetID = 2;
@@ -102,7 +103,7 @@ function main(){
                     var preset = 'islands#'+presets[presetID]+'CircleDotIcon';
                     var properties = {
                         balloonContentBody: data[i].coords,
-                        balloonContentHeader: data[i].date + ttype,
+                        balloonContentHeader: data[i].date + ttype + ' [' + data[i].type + ']',
                         color: presets[presetID],
                     };
                     var options = {preset: preset};
